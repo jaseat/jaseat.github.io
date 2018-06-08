@@ -17,9 +17,16 @@
     padding: 0;
     grid-row: 2 / 3;
   }
+  li {
+    a {
+      text-decoration: none;
+      color: $sub-color;
+    }
+  }
 }
 
 .navbar {
+  padding: 0.25em;
   font-size: 1.5em;
   button {
     display: none;
@@ -27,6 +34,7 @@
     background-color: $sub-color;
     text-align: center;
     text-decoration: none;
+    margin-right: 1em;
     @media screen and (max-width: $break-small) {
       display: block;
       justify-self: end;
