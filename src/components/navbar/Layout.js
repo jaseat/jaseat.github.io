@@ -19,12 +19,12 @@ class Navigation extends Component {
       ['Portfolio', '/portfolio'],
       ['Contact', '/contact'],
     ];
-    const { containerStyle, navStyle, listStlye, nameStyle } = styles;
+    const { listStlye } = styles;
     return (
-      <div style={containerStyle} className="navbar">
-        <div style={nameStyle}>Jacob Seatris</div>
+      <div className="navbar">
+        <div>Jacob Seatris</div>
         <div
-          className={this.state.expand ? 'navbar-expand' : 'navbar-collapse'}
+          className={this.state.expand ? 'navlist-expand' : 'navlist-collapse'}
         >
           <ul>
             {list.map(li => {
