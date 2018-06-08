@@ -1,6 +1,21 @@
 @import 'Colors.scss';
+@import 'Breakpoints.scss';
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 2em;
+  grid-row-gap: 0.5em;
+  margin: 1em 0.5em;
+  @media screen and (max-width: $break-small) {
+    grid-template-columns: 1fr;
+  }
+}
 
 .home {
   border: 1px solid $sub-color;
-  margin: 1em 0 0 0.5em;
+}
+
+.sidebar {
+  border: 1px solid $sub-color;
 }

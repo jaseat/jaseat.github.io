@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './styles';
 import '../../scss/Navbar.css';
+import hambugerButton from '../../images/hamburger-button.svg';
 
 class Navigation extends Component {
   constructor(props) {
@@ -22,7 +23,7 @@ class Navigation extends Component {
     const { listStlye } = styles;
     return (
       <div className="navbar">
-        <div>Jacob Seatris</div>
+        <div className="nav-name">Jacob Seatris</div>
         <div
           className={this.state.expand ? 'navlist-expand' : 'navlist-collapse'}
         >
@@ -36,7 +37,9 @@ class Navigation extends Component {
             })}
           </ul>
         </div>
-        <button onClick={this.handleClick} />
+        <button onClick={this.handleClick}>
+          <img src={hambugerButton} />
+        </button>
       </div>
     );
   }

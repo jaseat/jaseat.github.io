@@ -1,5 +1,5 @@
 @import 'Colors.scss';
-$break-small: 960px;
+@import 'Breakpoints.scss';
 
 @mixin navbar-list() {
   width: '100%';
@@ -23,6 +23,10 @@ $break-small: 960px;
   font-size: 1.5em;
   button {
     display: none;
+    border: none;
+    background-color: $sub-color;
+    text-align: center;
+    text-decoration: none;
     @media screen and (max-width: $break-small) {
       display: block;
       justify-self: end;
@@ -59,4 +63,9 @@ $break-small: 960px;
   ul {
     @include navbar-list();
   }
+}
+
+.nav-name {
+  margin-left: 0.25em;
+  overflow: auto;
 }
