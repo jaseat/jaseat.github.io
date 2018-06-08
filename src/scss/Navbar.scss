@@ -9,6 +9,7 @@
   justify-self: end;
   justify-content: flex-end;
   display: flex;
+  margin-right: 1em;
   @media screen and (max-width: $break-small) {
     display: flex;
     flex-direction: column;
