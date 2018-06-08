@@ -1,3 +1,4 @@
+@import 'Colors.scss';
 $break-small: 960px;
 
 @mixin navbar-list() {
@@ -32,7 +33,7 @@ $break-small: 960px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1.5em 1fr;
-  border-bottom: 1px solid #555;
+  border-bottom: 1px solid $sub-color;
 }
 
 .navlist-collapse {

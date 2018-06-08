@@ -1,12 +1,20 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navigation from './navbar';
+import Home from './home';
+
+import '../scss/App.css';
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Navigation />
+        <div>
+          <Navigation />
+          <Switch>
+            <Route path="/" component={Home} />
+          </Switch>
+        </div>
       </Router>
     );
   }
