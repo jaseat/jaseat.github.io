@@ -2,6 +2,21 @@
 
 body {
   margin: 0;
-  background-color: #111;
+  background-color: $bg-color;
   color: $sub-color;
+}
+
+.fade-up {
+  position: relative;
+  animation: fade-up 1s ease;
+  @keyframes fade-up {
+    from {
+      bottom: -1em;
+      opacity: 0;
+    }
+    to {
+      bottom: 0em;
+      opacity: 1;
+    }
+  }
 }

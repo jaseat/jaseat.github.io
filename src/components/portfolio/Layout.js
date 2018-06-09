@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+
 import ProjectCard from './ProjectCard';
+import PortfolioList from './PortfolioList';
+import PortfolioPage from './PortfolioPage';
 
 import '../../scss/Portfolio.css';
 import { capitalizeAndSpace } from '../../utils/helpers';
@@ -62,19 +66,37 @@ class Portfolio extends Component {
 
   render() {
     return (
-      <div className="portfolio-container">
-        {!this.state.loading &&
-          this.state.repos.map((repo, idx) => (
-            <ProjectCard
-              name={repo.name}
-              desc={repo.desc}
-              img={repo.img}
-              onClick={() =>
-                this.props.history.push(`${this.props.match.path}/${idx}`)
-              }
+      <Switch>
+        {this.state.loading ? (
+          <div className="loader-container">
+            <div className="loader" />
+          </div>
+        ) : (
+          <div>
+            <Route
+              exact
+              path={`${this.props.match.path}`}
+              render={props => (
+                <PortfolioList
+                  loading={this.state.loading}
+                  repos={this.state.repos}
+                  {...this.props}
+                  {...props}
+                />
+              )}
             />
-          ))}
-      </div>
+            <Route
+              path={`${this.props.match.path}/:id`}
+              render={props => (
+                <PortfolioPage
+                  repo={this.state.repos[props.match.params.id]}
+                  {...props}
+                />
+              )}
+            />
+          </div>
+        )}
+      </Switch>
     );
   }
 }

@@ -13,6 +13,9 @@ class Navigation extends Component {
   handleClick = () => {
     this.setState({ expand: !this.state.expand });
   };
+  handleClose = () => {
+    this.setState({ expand: false });
+  };
   render() {
     const list = [
       ['Home', '/'],
@@ -21,20 +24,24 @@ class Navigation extends Component {
     ];
     return (
       <div className="navbar">
-        <div className="nav-name">Jacob Seatris</div>
+        <div onClick={() => this.props.history.push('/')} className="nav-name">
+          Jacob Seatris
+        </div>
         <div
           className={this.state.expand ? 'navlist-expand' : 'navlist-collapse'}
         >
           <ul>
             {list.map((li, idx) => (
               <li key={idx}>
-                <Link to={li[1]}>{li[0]}</Link>
+                <Link onClick={this.handleClose} to={li[1]}>
+                  {li[0]}
+                </Link>
               </li>
             ))}
           </ul>
         </div>
         <button onClick={this.handleClick}>
-          <img src={hambugerButton} />
+          <object type="image/svg+xml" data={hambugerButton} />
         </button>
       </div>
     );

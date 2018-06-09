@@ -7,7 +7,7 @@ import Side from './Side';
 class Home extends Component {
   render() {
     return (
-      <div className="wrapper">
+      <div className="wrapper fade-up">
         <Main />
         <Side />
       </div>
