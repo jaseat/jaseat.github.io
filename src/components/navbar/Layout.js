@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import styles from './styles';
 import '../../scss/Navbar.css';
 import hambugerButton from '../../images/hamburger-button.svg';
 
@@ -20,7 +19,6 @@ class Navigation extends Component {
       ['Portfolio', '/portfolio'],
       ['Contact', '/contact'],
     ];
-    const { listStlye } = styles;
     return (
       <div className="navbar">
         <div className="nav-name">Jacob Seatris</div>
@@ -28,13 +26,11 @@ class Navigation extends Component {
           className={this.state.expand ? 'navlist-expand' : 'navlist-collapse'}
         >
           <ul>
-            {list.map(li => {
-              return (
-                <li style={listStlye}>
-                  <Link to={li[1]}>{li[0]}</Link>
-                </li>
-              );
-            })}
+            {list.map((li, idx) => (
+              <li key={idx}>
+                <Link to={li[1]}>{li[0]}</Link>
+              </li>
+            ))}
           </ul>
         </div>
         <button onClick={this.handleClick}>

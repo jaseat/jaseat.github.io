@@ -1,3 +1,7 @@
+@import '_colors';
+
 body {
   margin: 0;
+  background-color: #111;
+  color: $sub-color;
 }

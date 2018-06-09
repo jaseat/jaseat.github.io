@@ -1,5 +1,5 @@
-@import 'Colors.scss';
-@import 'Breakpoints.scss';
+@import '_colors';
+@import '_breakpoints';
 
 @mixin navbar-list() {
   width: '100%';
@@ -19,6 +19,26 @@
     grid-row: 2 / 3;
   }
   li {
+    margin-right: 0.5em;
+    :last-child {
+      margin-right: 0;
+    }
+    :after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 0px;
+      background: $sub-color;
+      transition: width 0.5s ease, background-color 0.5s ease;
+    }
+    :hover {
+      color: $main-color;
+    }
+    :hover:after {
+      width: 100%;
+      background: $main-color;
+    }
     a {
       text-decoration: none;
       color: $sub-color;
@@ -29,6 +49,7 @@
 .navbar {
   padding: 0.25em;
   font-size: 1.5em;
+  clear: both;
   button {
     display: none;
     border: none;
@@ -44,14 +65,18 @@
   width: 100%;
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1.5em 1fr;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: 2.5em 1fr;
   border-bottom: 1px solid $sub-color;
+  @media screen and (max-width: $break-small) {
+    grid-template-columns: 3.5fr 1fr;
+  }
 }
 
 .navlist-collapse {
   transition: height 500ms 0ms;
   overflow: hidden;
+  align-self: center;
   @media screen and (max-width: $break-small) {
     height: 0em;
     grid-row: 2 / 3;
@@ -64,10 +89,11 @@
 .navlist-expand {
   transition: height 500ms 0ms;
   overflow: hidden;
+  align-self: center;
   @media screen and (max-width: $break-small) {
     grid-row: 2 / 3;
     justify-self: start;
-    height: 4em;
+    height: 4.5em;
   }
   ul {
     @include navbar-list();
@@ -75,6 +101,9 @@
 }
 
 .nav-name {
+  font-family: 'Bungee Shade', cursive;
+  grid-row: 1 / 2;
   margin-left: 0.25em;
-  overflow: auto;
+  height: 2em;
+  width: 100%;
 }
