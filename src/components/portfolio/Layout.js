@@ -29,7 +29,7 @@ class Portfolio extends Component {
     var img;
     if (imgResponse.status === 200) {
       var imgJson = await imgResponse.json();
-      img = imgJson.content;
+      img = imgJson.download_url;
     } else {
       img = null;
     }

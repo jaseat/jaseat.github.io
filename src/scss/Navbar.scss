@@ -67,7 +67,7 @@
   display: grid;
   grid-template-columns: auto 1fr;
   grid-template-rows: 2.5em 1fr;
-  border-bottom: 1px solid $sub-color;
+  // border-bottom: 1px solid $sub-color;
   @media screen and (max-width: $break-small) {
     grid-template-columns: 3.5fr 1fr;
   }

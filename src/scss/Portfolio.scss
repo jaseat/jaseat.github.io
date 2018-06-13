@@ -15,6 +15,7 @@
   border: 1px solid white;
   cursor: pointer;
   position: relative;
+  background-color: #000;
   .project-card-banner {
     display: grid;
     grid-template-rows: 1.5em 1fr;
@@ -24,16 +25,25 @@
     bottom: 0;
     height: 1.5em;
     overflow: hidden;
-    transition: height 1000ms ease;
+    transition: height 500ms ease;
     font-size: 1.5em;
-    background-color: transparentize($color: #555, $amount: 0.5);
+    background-color: transparentize($color: #333, $amount: 0.1);
     color: $sub-color;
   }
-}
-
-.project-card:hover {
-  .project-card-banner {
-    height: 75%;
+  &:hover {
+    .project-card-banner {
+      height: 75%;
+    }
+  }
+  .project-card-img {
+    height: 15em;
+    display: flex;
+    // background-color: ;
+    img {
+      height: 100%;
+      max-width: 100%;
+      margin: auto;
+    }
   }
 }
 
@@ -54,22 +64,56 @@
   animation: spin 1.5s linear infinite;
   // opacity: 0.95;
   margin-bottom: 5em;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
 
 .portfolio-page-return {
   display: inline-block;
+  margin: 1em 0.5em;
   cursor: pointer;
 }
 
 .portfolio-page-return:hover {
   color: $main-color;
+}
+
+.portfolio-page-container {
+  text-align: center;
+  img {
+    height: 15em;
+    border: 3px solid #fff;
+  }
+}
+
+.portfolio-page-links {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  a {
+    &:after {
+      content: '';
+      display: block;
+      margin: auto;
+      height: 3px;
+      width: 0px;
+      background: $sub-color;
+      transition: width 0.5s ease, background-color 0.5s ease;
+    }
+    &:hover {
+      color: $main-color;
+    }
+    &:hover:after {
+      width: 100%;
+      background: $main-color;
+    }
+    text-decoration: none;
+    color: $sub-color;
+  }
 }

@@ -4,6 +4,7 @@ body {
   margin: 0;
   background-color: $bg-color;
   color: $sub-color;
+  font-size: 1.2em;
 }
 
 .fade-up {
@@ -11,7 +12,7 @@ body {
   animation: fade-up 1s ease;
   @keyframes fade-up {
     from {
-      bottom: -1em;
+      bottom: -1.2em;
       opacity: 0;
     }
     to {
