@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const ProjectCard = props => (
   <div className="project-card" onClick={props.onClick}>

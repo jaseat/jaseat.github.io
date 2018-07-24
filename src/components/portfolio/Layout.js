@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import ProjectCard from './ProjectCard';
 import PortfolioList from './PortfolioList';
 import PortfolioPage from './PortfolioPage';
 

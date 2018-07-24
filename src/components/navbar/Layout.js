@@ -44,7 +44,11 @@ class Navigation extends Component {
           </ul>
         </div>
         <button onClick={this.handleClick}>
-          <object type="image/svg+xml" data={hambugerButton} />
+          <object
+            type="image/svg+xml"
+            data={hambugerButton}
+            ariaLabel="hamburger button"
+          />
         </button>
       </div>
     );
