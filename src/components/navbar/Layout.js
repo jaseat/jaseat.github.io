@@ -38,6 +38,9 @@ class Navigation extends Component {
                 </Link>
               </li>
             ))}
+            <li>
+              <a href="https://github.com/jaseat">Github</a>
+            </li>
           </ul>
         </div>
         <button onClick={this.handleClick}>

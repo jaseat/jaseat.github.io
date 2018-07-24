@@ -8,8 +8,9 @@ class Home extends Component {
   render() {
     return (
       <div className="wrapper fade-up">
-        <Main />
-        <Side />
+        <h1>Main Page Under Construction....</h1>
+        {/* <Main />
+        <Side /> */}
       </div>
     );
   }

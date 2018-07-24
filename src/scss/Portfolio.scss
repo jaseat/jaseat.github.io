@@ -8,6 +8,7 @@
   grid-column-gap: 2em;
   grid-row-gap: 3em;
   grid-auto-rows: 15em;
+  justify-items: center;
 }
 
 .project-card {
@@ -16,6 +17,7 @@
   cursor: pointer;
   position: relative;
   background-color: #000;
+  width: 20em;
   .project-card-banner {
     display: grid;
     grid-template-rows: 1.5em 1fr;

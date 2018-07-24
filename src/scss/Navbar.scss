@@ -94,7 +94,7 @@
   @media screen and (max-width: $break-small) {
     grid-row: 2 / 3;
     justify-self: start;
-    height: 4.5em;
+    height: 6em;
   }
   ul {
     @include navbar-list();
