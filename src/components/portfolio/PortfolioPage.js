@@ -12,7 +12,7 @@ const PortfolioPage = props => (
     </div>
     <div className="portfolio-page-container fade-up">
       <h1>{props.repo.name}</h1>
-      <img src={props.repo.img} />
+      <img src={props.repo.img} alt="repo image" />
       <p>{props.repo.desc}</p>
       <div className="portfolio-page-links">
         <a href={props.repo.repo_url}>Repo </a>

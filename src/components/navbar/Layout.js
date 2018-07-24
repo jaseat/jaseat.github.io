@@ -48,6 +48,7 @@ class Navigation extends Component {
             type="image/svg+xml"
             data={hambugerButton}
             ariaLabel="hamburger button"
+            alt="hambuger button"
           />
         </button>
       </div>

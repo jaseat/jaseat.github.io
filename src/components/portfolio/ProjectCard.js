@@ -3,7 +3,7 @@ import React from 'react';
 const ProjectCard = props => (
   <div className="project-card" onClick={props.onClick}>
     <div className="project-card-img">
-      <img src={props.img} />
+      <img src={props.img} alt="project image" />
     </div>
     <div className="project-card-banner">
       <div className="project-card-name">{props.name}</div>
