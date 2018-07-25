@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import '../../scss/Home.css';
 import '../../scss/Home.css';
 // import Main from './Main';
 // import Side from './Side';
@@ -7,11 +6,11 @@ import '../../scss/Home.css';
 class Home extends Component {
   render() {
     return (
-      <div className="wrapper fade-up">
-        <h1>Main Page Under Construction....</h1>
-        {/* <Main />
-        <Side /> */}
-      </div>
+      <h1>Main Page Under Construction....</h1>
+      // <div className="wrapper fade-up">
+      //   <Main />
+      //   <Side />
+      // </div>
     );
   }
 }
